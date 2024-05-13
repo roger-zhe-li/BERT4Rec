@@ -23,7 +23,7 @@ The debugging stage relies much on the Torchsnooper package. <br/>
 
 
 ## Illustration on some key design choices
-- Following the original paper, I use 2 heads and 2 stacks of the transformer encoder structure. Sequence length is set at 50 for demo. The mask probability &rou is set at 0.2, also adhering to the statement in the original paper;
+- Following the original paper, I use 2 heads and 2 stacks of the transformer encoder structure. Sequence length is set at 50 for demo. The mask probability \rho is set at 0.2, also adhering to the statement in the original paper;
 - Since the item ID starts from 0 and ends at n_item - 1 (40857), here I set the mask token ID as n_item, and the padding token ID as n_item + 1. All the sequence mask and masked_fill operations all follow this ID setting;
 - Evaluation is done using nDCG@10 and RR@10. Both are position-aware to avoid the disadvantage of HR@10. 10 is a magic number, which could also be further included in a list like \[3, 5, 10, 20\] for more extensive analysis on different cutoffs;
 - Different from the original paper, negative sampling on validation/test samples follows a random sampler rather than a popularity-based one. This is because I think it is even more important to get more samples exposed in evaluation rather than always only put the most popular items as negative samples, which might cause potential bias issues (though yet to confirm with experimental results);
