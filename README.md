@@ -8,7 +8,7 @@ Code Author: Roger Zhe Li
 
 ## Environment Settings
 I use PyTorch 2.2.1 as the main deep learning framework for implementation, with the CUDA version of 12.1. <br/>
-The debugging stage relies much on the Torchsnooper package. <br/>
+The debugging stage relies much on the Torchsnooper package (removed in the final repo). <br/>
 
 
 ## File and Folder Structure
