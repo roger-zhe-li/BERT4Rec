@@ -31,11 +31,6 @@ For now the parse_arg function is still not implemented. All key hyperparameters
 python3 main.py
 ```
 
-```
-### Dataset
-The dataset is a session-based movie dataset with 4 different sub-files stored in the tfrecord format. In this repo I first turned the data into a Pandas dataframe and load it to the PyTorch dataloader.
-For the sake of time, in the demo I only use the 4th part (./data-3), the smallest one, for experiments.
-
 
 ## License
 * This repo is under an [MIT license]([https://creativecommons.org/licenses/by/4.0/](https://opensource.org/license/mit)).
