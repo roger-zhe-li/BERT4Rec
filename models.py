@@ -39,7 +39,7 @@ class MultiheadAttention(nn.Module):
         attention_logits = torch.matmul(query, key.permute(0, 1, 3, 2)) / self.scale
         if mask is not None:
             # set masked seq positions (False) as an outlier number, so that its attention is 0
-            attention_logits = attention_logits.masked_fill(mask == n_item + 1, -8964)
+            attention_logits = attention_logits.masked_fill(mask==0, -8964)
 
         if dropout is not None:
             attention_logits = nn.Dropout(p=dropout)(attention_logits)
